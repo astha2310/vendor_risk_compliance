@@ -3,6 +3,7 @@
 A Power Platform application that helps organizations track third-party vendors, run standardized risk assessments against them, and manage the findings and remediation that come out of those assessments.
 
 Built as a portfolio project to demonstrate hands-on Power Platform development: Dataverse data modeling, model-driven and canvas apps, Power Automate approval workflows with Teams and email integration, security-role-based access control, and solution-based ALM (Application Lifecycle Management) across multiple environments.
+![VRC Admin Console](screenshots/admin-console-home.png)
 
 ## Why this project
 
@@ -16,6 +17,7 @@ Vendors (IT contractors, cloud providers, software suppliers, etc.) introduce ri
 - **Findings and remediation tracking** — issues identified during an assessment become Finding records with a remediation owner and due date. A scheduled flow sends reminders for anything overdue.
 - **Self-service vendor submission** — a lightweight canvas app lets a Requester submit a new vendor for review without needing access to the full admin console.
 - **Reporting** — built-in charts (Risk Tier distribution, Findings by Remediation Owner) give an at-a-glance view of vendor risk posture.
+![VRC Admin Console](screenshots/admin-console-home.png)
 - **Role-based security** — three security roles (Admin, Assessor, Requester) control who can see and do what.
 
 ## How it's built
@@ -58,6 +60,7 @@ Access is controlled through three Dataverse security roles:
 - **VRC Requester** — can submit new vendors for consideration via the self-service canvas app, with read access to their own submissions.
 
 **Approval rule:** any assessment whose risk tier is set to High requires Assessor approval, followed by Admin approval, before it is considered finalized. This two-step approval is enforced by an automated flow (`VRC_AssessmentApproval`) that watches for risk tier changes, routes the approval request by email to the configured approver (stored as an environment variable, not hard-coded — so it can be changed per environment without editing the flow), and simultaneously posts a notification to a dedicated Microsoft Teams channel.
+![Teams approval notification](screenshots/teams-notification.png)
 
 ### Automation
 
