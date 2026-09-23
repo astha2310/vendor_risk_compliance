@@ -1,3 +1,6 @@
+**[▶ Watch the 6-minute walkthrough]
+(https://youtu.be/Ib378S8ZbV4)**
+
 # Vendor Risk Compliance (VRC)
 
 A Power Platform application that helps organizations track third-party vendors, run standardized risk assessments against them, and manage the findings and remediation that come out of those assessments.
