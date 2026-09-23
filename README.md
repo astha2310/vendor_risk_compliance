@@ -97,3 +97,6 @@ The original plan called for a Power BI dashboard. During development, Power BI 
 ## Status
 
 This is a completed portfolio project. It is not connected to a production vendor risk process for any real organization.
+
+Built by Astha Patel 
+[LinkedIn](https://www.linkedin.com/in/asthap23/) · [GitHub](https://github.com/astha2310)
